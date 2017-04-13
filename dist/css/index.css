@@ -1,0 +1,26 @@
+body {
+  margin: 50px auto;
+  text-align: center; }
+
+#saolei {
+  display: inline-block;
+  background-color: #D4C8BC;
+  margin: 0 auto;
+  padding: 10px; }
+  #saolei span {
+    display: inline-block;
+    width: 72.72727px;
+    height: 72.72727px;
+    background-color: #878787;
+    border-radius: 4px;
+    cursor: pointer;
+    vertical-align: middle;
+    margin: 3px;
+    line-height: 72.72727px;
+    font-size: 72px;
+    font-family: 'Microsoft Yahei'; }
+    #saolei span.blank, #saolei span.boom, #saolei span.number {
+      background-color: #eee4da;
+      color: #776e65; }
+
+/*# sourceMappingURL=index.css.map */

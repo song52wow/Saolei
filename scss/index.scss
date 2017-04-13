@@ -1,0 +1,33 @@
+body {
+    margin: 50px auto;
+    text-align: center;
+}
+
+#saolei {
+    display: inline-block;
+    background-color: #D4C8BC;
+    // width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+
+    span {
+        display: inline-block;
+        width: (400px / 5.5);
+        height: (400px / 5.5);
+        background-color: #878787;
+        border-radius: 4px;
+        cursor: pointer;
+        vertical-align: middle;
+        margin: 3px;
+        line-height: (400px / 5.5);
+        font-size: 72px;
+        font-family: 'Microsoft Yahei';
+
+        &.blank,
+        &.boom,
+        &.number {
+            background-color: #eee4da;
+            color: #776e65;
+        }
+    }
+}
