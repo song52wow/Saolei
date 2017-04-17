@@ -1,34 +1,61 @@
+$fontSize: 75;
+
+html {
+    font-size: $fontSize + px;
+}
+
 body {
-    margin: 50px auto;
+    margin: 50rem / $fontSize auto;
     text-align: center;
 }
 
-#saolei,
-#saolei2 {
+h1 {
+    font-size: 25rem / $fontSize;
+}
+
+#saolei {
     display: inline-block;
     background-color: #D4C8BC;
     // width: 400px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 10rem / $fontSize;
 
-    span {
-        display: inline-block;
-        width: (400px / 10);
-        height: (400px / 10);
-        background-color: #878787;
-        border-radius: 4px;
-        cursor: pointer;
-        vertical-align: middle;
-        margin: 3px;
-        line-height: (400px / 10);
-        font-size: 40px;
-        font-family: 'Microsoft Yahei';
+    .sqDiv {
+        font-size: initial;
 
-        &.blank,
-        &.boom,
-        &.number {
-            background-color: #eee4da;
-            color: #776e65;
+        span {
+            display: inline-block;
+            width: (400rem / $fontSize / 10);
+            height: (400rem / $fontSize / 10);
+            background-color: #878787;
+            border-radius: 4px;
+            cursor: pointer;
+            vertical-align: middle;
+            margin: 3px;
+            line-height: (400rem / $fontSize / 10);
+            font-size: 40rem / $fontSize;
+            font-family: 'Microsoft Yahei';
+
+            &.blank,
+            &.boom,
+            &.number {
+                background-color: #eee4da;
+                color: #776e65;
+            }
+        }
+    }
+}
+@media screen and (min-width:375px) and (max-width: 750px) {
+    $fontSize375: 37.5;
+
+    #saolei {
+        .sqDiv {
+            span {
+                width: (140rem / $fontSize375 / 10);
+                height: (140rem / $fontSize375 / 10);
+                line-height: (140rem / $fontSize375 / 10);
+                font-size: 14rem / $fontSize375;
+            }
         }
     }
 }

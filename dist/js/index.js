@@ -6,7 +6,7 @@ let _saolei = document.getElementById('saolei'),
     total = [];
 
 let mine = {
-    square: [20, 20], // 定义方格数量，x， y
+    square: [10, 10], // 定义方格数量，x， y
     bomb: 20, // 定义雷的数量
     init: function() {
         this.squInit();
@@ -20,10 +20,8 @@ let mine = {
                     mine.show();
                 } else if (numXY.indexOf(_index) >= 0) {
                     _span[_index].innerHTML = total[numXY.indexOf(_index)];
-                    _span[_index].className = 'number';
-                } else {
-                    _span[_index].className = 'blank';
                 }
+                _span[_index].className = 'blank';
 
             }
         }
@@ -77,18 +75,18 @@ let mine = {
                         for (let n = i - 1; n <= i + 1; n++) {
                             if (n === bombNum[b][0] && m === bombNum[b][1]) {
                                 num++;
-                                numXY.push(j * this.square[0] + i);
-                                total.push(num);
                                 break;
                             }
                         }
                     }
                 }
+                if (num === 0) {
+                    num = null;
+                }
+                numXY.push(j * this.square[0] + i);
+                total.push(num);
             }
         }
-        // numXY.sort(function(a, b) {
-        //     return a - b;
-        // })
     },
     // 展示全部
     show: function() {
@@ -98,7 +96,7 @@ let mine = {
         }
         for (let i = 0; i < numXY.length; i++) {
             _span[numXY[i]].innerHTML = total[i];
-            _span[numXY[i]].className = 'number';
+            // _span[numXY[i]].className = 'number';
         }
         for (let i = 0; i < bombNum.length; i++) {
             spanAdd(bombNum[i][1], bombNum[i][0], 'B', 'boom');
@@ -113,6 +111,7 @@ function spanAdd(oI, oJ, iHtml, cName) {
     _span[oJ].className = cName;
 }
 
+// 获取当前索引
 function index(obj, dq) {
     for (let i = 0; i < obj.length; i++) {
         if (obj[i] === dq) {

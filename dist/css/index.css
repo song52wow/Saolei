@@ -1,31 +1,41 @@
+html {
+  font-size: 75px; }
+
 body {
-  margin: 50px auto;
+  margin: 0.66667rem auto;
   text-align: center; }
 
-#saolei,
-#saolei2 {
+h1 {
+  font-size: 0.33333rem; }
+
+#saolei {
   display: inline-block;
   background-color: #D4C8BC;
   margin: 0 auto;
-  padding: 10px; }
-  #saolei span,
-  #saolei2 span {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-color: #878787;
-    border-radius: 4px;
-    cursor: pointer;
-    vertical-align: middle;
-    margin: 3px;
-    line-height: 40px;
-    font-size: 40px;
-    font-family: 'Microsoft Yahei'; }
-    #saolei span.blank, #saolei span.boom, #saolei span.number,
-    #saolei2 span.blank,
-    #saolei2 span.boom,
-    #saolei2 span.number {
-      background-color: #eee4da;
-      color: #776e65; }
+  padding: 0.13333rem; }
+  #saolei .sqDiv {
+    font-size: initial; }
+    #saolei .sqDiv span {
+      display: inline-block;
+      width: 0.53333rem;
+      height: 0.53333rem;
+      background-color: #878787;
+      border-radius: 4px;
+      cursor: pointer;
+      vertical-align: middle;
+      margin: 3px;
+      line-height: 0.53333rem;
+      font-size: 0.53333rem;
+      font-family: 'Microsoft Yahei'; }
+      #saolei .sqDiv span.blank, #saolei .sqDiv span.boom, #saolei .sqDiv span.number {
+        background-color: #eee4da;
+        color: #776e65; }
+
+@media screen and (min-width: 375px) and (max-width: 750px) {
+  #saolei .sqDiv span {
+    width: 0.37333rem;
+    height: 0.37333rem;
+    line-height: 0.37333rem;
+    font-size: 0.37333rem; } }
 
 /*# sourceMappingURL=index.css.map */
